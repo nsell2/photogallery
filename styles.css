@@ -1,0 +1,273 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* text and background */
+html {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #000000;
+}
+body {
+    width: 485px;
+    background-color: #ffffff;
+    margin: 0 auto;
+}
+h1 {
+    font-size: 3em;
+    color: #007d7b;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+h2 {
+    font-size: 2em;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    margin: 15px;
+}
+p {
+    font-size: 1.25em;
+    margin: 20px 10px 10px;
+    line-height: 1.5;
+}
+p + p {
+    margin: 20px 10px;
+}
+figcaption, label, input, small {
+    font-size: 1em;
+}
+
+/* navigation */
+nav {
+    background-color: #000000;
+    text-align: center;
+    padding: 20px 0px;
+}
+nav h2 {
+    display:none;
+    font-size: 0;
+}
+nav li {
+    list-style: none;
+    display: inline-block;
+    margin: 10px;
+    text-transform: uppercase;
+}
+nav li:last-child {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    border: 3px;
+    padding: 3px;
+    border-style: solid;
+    border-color: #ffffff;
+    background-color: #000000;
+}
+nav a {
+    font-size: 1.5em;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px;
+}
+nav a:hover, nav a:focus {
+    background-color: #ffffff;
+    color: #007d7b;
+    border-radius: 5px;
+}
+nav li:last-child:hover, nav li:last-child:focus {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 5px;
+}
+
+/* photos */
+#photos {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+#photos figure {
+    margin: 0 auto;
+}
+figcaption {
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+}
+.top {
+    bottom: 265px;
+}
+.top-tall {
+    bottom: 610px;
+}
+.bottom {
+    bottom: 30px;
+}
+.white-text {
+    color: #ffffff;
+}
+.black-text {
+    color: #000000;
+}
+
+/* contact form */
+#contact {
+    background-color: #000000;
+    color: #ffffff;
+}
+#contact h2 {
+    padding: 15px 0 0 0;
+}
+#contact p {
+    text-align: center;
+}
+form {
+    margin: 20px 20px 0;
+    background-color: #000000;
+}
+form legend {
+    display: none;
+}
+input {
+    box-sizing: border-box;
+}
+input::placeholder {
+    color: #007d7b;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-left: 5px;
+}
+label {
+    display: block;
+    margin: 15px 0 0 30px;
+    text-transform: uppercase;
+}
+#name, #email, #message {
+    display: block;
+    width: 90%;
+    margin: 0 auto 10px;
+    height: 40px;
+}
+input[type=submit] {
+    display: block;
+    width: 50%;
+    margin: 20px auto 30px;
+    cursor: pointer;
+    background-color: #007d7b;
+    color: #ffffff;
+    border-radius: 15px;
+    border-style: none;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+input[type=submit]:hover, input[type=submit]:focus {
+    color: #007d7b;
+    background-color: #ffffff;
+}
+
+footer {
+    color: #ffffff;
+    background-color: #000000;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 20px;
+}
+
+@media screen and (min-width: 880px) {
+    body {
+        width: 880px;
+    }
+    h1 {
+        text-align: left;
+    }
+    #photos {
+        grid-template-columns: 1fr 1fr;
+    }
+    label {
+        display: block;
+        margin: 20px 0 0 72px;
+        text-transform: uppercase;
+    }
+    #name, #email, #message {
+        display: block;
+        width: 85%;
+        margin: 0 auto 10px;
+        height: 40px;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    body {
+        width: 1300px;
+    }
+    h1 {
+        text-align: left;
+    }
+    nav {
+        text-align: right;
+    }
+    #photos {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    label {
+        display: block;
+        margin: 20px 0 0 135px;
+        text-transform: uppercase;
+    }
+    #name, #email, #message {
+        display: block;
+        width: 80%;
+        margin: 0 auto 10px;
+        height: 40px;
+    }
+}
